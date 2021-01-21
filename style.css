@@ -80,22 +80,22 @@ ul {
    transform: rotatex(5deg);
    transform: rotateY(15deg);
    position: absolute;
-    top: 280px;
+    top: 265px;
     left: 640px;
     z-index: 0;
 }
 .m4 {
     position: absolute;
-    top: 170px;
-    left: 630px;
+    top: 150px;
+    left: 635px;
     z-index: 1;
 }
 .m7{
     position: absolute;
-    top: 260px;
-    left: 580px;
+    top: 240px;
+    left: 579px;
     z-index: 0;
-    transform: rotatex(60deg);
+    transform: rotatex(75deg);
 }
 .m2 {
     position: absolute;
@@ -111,8 +111,8 @@ ul {
 }
 .m5 {
     position: absolute;
-    top: 100px;
-    left: 650px;
+    top: 75px;
+    left: 680px;
     z-index: 0;
 }
 .m6{
@@ -203,15 +203,16 @@ main {
     margin-top: 0px;
     padding-top: 0px;
 }
-.GH button {
+.GH  p a button {
     height: 6vh;
-    width: 6em;
+    width: 7.5em;
     display: inline-block;
     border-radius: 7px;
-    border: 1px solid rgb(182, 179, 179);
+    border: .5px solid rgb(191, 211, 247);
     background-color: white;
-    color: rgb(0, 119, 255);
-    font-weight: 700;
+    color: rgb(28, 145, 241);
+    font-weight: 600;
+    font-size: .5em;
 }
 
 footer {
@@ -236,7 +237,7 @@ footer {
     align-items: center;
     margin-left: 8em;
  }
- .ft1 a{
+ .ft1 a, .ft1 p{
      text-decoration: none;
      font-size: smaller;
      padding: .6em;
@@ -247,19 +248,143 @@ footer {
      font-size: 1.4em;
      padding: .3em;
  }
- /*dropdown manus*/
- .dropdown1, .dropdown2, .dropdown3 {
-     display: flex;
-     position: absolute; 
-     align-items: center;
 
+ /*dropdown */
+ .dropdown1 {
+     list-style: none;
+     position: absolute;
+     width: 100px;
+     z-index: 5;
+     display: flex;
+     flex-direction: column;
+     left: 254px;
+     align-items: center;
+     border-radius: 10px;
+     visibility: hidden;
  }
- .dropdown1 li, .dropdown2 li, .dropdown3 li {
-    display: block;
-    position: absolute; 
-    background-color: blue;
-      
+ .dropdown1 li{
+     display: block;
+     width: 467px;
+     background-color: white;
+     height: 45px;
+     border-bottom: 1px solid rgb(233, 225, 225);;
+     
+ }
+ .dropdown1 li a{
+     padding: 1em 1em 1em 0.5em;
+     text-decoration: none;
+     color: rgb(107, 104, 104);;
+ }
+ .dropdown2 {
+    list-style: none;
+    position: absolute;
+    width: 100px;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    right: 120px;
+    top: 50px;
+    align-items: center;
+    visibility: hidden;
 }
+.dropdown2 li{
+    display: block;
+    width: 170px;
+    background-color: white;
+    
+    
+}
+.dropdown2 li a{
+    padding: 1em;
+    text-decoration: none;
+    color: rgb(107, 104, 104);;
+}
+p.pUp {
+    color: white;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    z-index: 10;
+    visibility: hidden;
+}
+.dropdown3 {
+    list-style: none;
+    position: absolute;
+    width: 100px;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    right: 70px;
+    top: 50px;
+    align-items: center;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.dropdown3 li{
+    display: block;
+    width: 190px;
+    background-color: white;
+    padding-top: 10px;
+    
+}
+.dropdown3 li a{
+    padding: 1em;
+    text-decoration: none;
+    color: rgb(107, 104, 104);
+    font-size: .9em;
+}
+.dropdown3 li button {
+    height: 2.5em;
+    /*padding: 0.2em;*/
+    width: 85%;
+    text-align: left;
+    background-color: white;
+    bottom: 1px solid rgb(233, 229, 229);
+    border-radius: 5px;
+    color: rgb(107, 104, 104);
+}
+.dropdown3 li button .far{
+    font-size: 1.2em;
+    padding-left: .5em;
+    color:rgb(107, 104, 104);
+}
+p.pUp2 {
+    color: white;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    z-index: 10;
+    visibility: hidden;
+}
+nav ul li a:hover{
+    color: rgb(204, 195, 195);
+}
+.searchArea a:hover, 
+.ft1 a:hover,
+.Product a:hover,
+.Platform a:hover,
+.Support a:hover,
+.Company a:hover
+{
+   text-decoration: underline;
+   color: rgb(0, 132, 255);
+}
+.srh button {
+    background-color: white; 
+}
+.srh button:hover {
+    background-color: rgb(248, 241, 241); 
+}
+.GH  p a button:hover {
+    border: 1px solid blue;
+}
+.navsrch:focus {
+    background-color: white;
+    
+}
+
+
+
 
 
 
