@@ -34,11 +34,10 @@ header {
    border-radius: 6px;
    border: 0.2px solid rgb(88, 81, 81);
    background-color:  transparent;
-   color: white;
    padding-left: 1em;
 }
 .ul1 input::placeholder{
-    color: rgb(221, 213, 213);
+    color: rgb(88, 81, 81);
 }
 
 nav {
@@ -62,11 +61,12 @@ ul {
     
 }
 .ul1 li, .ul2 li, .ft1, .ft2{
+    position: relative;
     display: inline-block;
     padding: .5em;
 }
 
-#head {
+.head {
    position: relative;
    display: flex;
    flex-direction: column;
@@ -75,51 +75,72 @@ ul {
    background: url(images/download.jfif);
    align-items: center;
    flex-wrap: wrap;
+   
 }
 .m3 {
    transform: rotatex(5deg);
    transform: rotateY(15deg);
    position: absolute;
-    top: 265px;
-    left: 640px;
+    top: 16.56rem;
+    left: 40rem;
     z-index: 0;
+    transition: 1s;
 }
 .m4 {
     position: absolute;
-    top: 150px;
-    left: 635px;
+    top: 9.37rem;
+    left: 39.69rem;
     z-index: 1;
+    transition: 1s;
 }
 .m7{
     position: absolute;
-    top: 240px;
-    left: 579px;
+    top: 15rem;
+    left: 36.19rem;
     z-index: 0;
     transform: rotatex(75deg);
+    transition: transform 1s;
 }
 .m2 {
     position: absolute;
     z-index: 2;
-    top: 95px;
-    left: 560px;
+    top: 5.94rem;
+    left: 35rem;
+    transition: 1s;
 }
 .m1{
     position: absolute;
     z-index: 2;
     top: 75px;
     left: 270px;
+    transition: 1s;
 }
 .m5 {
     position: absolute;
     top: 75px;
     left: 680px;
     z-index: 0;
+    transition: 1s;
 }
 .m6{
     position: absolute;
     top: 120px;
     left: 960px;
     z-index: 0;
+    transition: 1s;
+}
+.head:hover .m1,
+.head:hover .m2,
+.head:hover .m3,
+.head:hover .m4
+{
+    transform: translateX(5%);
+}
+
+.head:hover .m5,
+.head:hover .m6
+{
+    transform: translateX(-5%);
 }
 main {
     position: relative;
@@ -250,116 +271,161 @@ footer {
  }
 
  /*dropdown */
- .dropdown1 {
-     list-style: none;
-     position: absolute;
-     width: 467px;;
-     z-index: 5;
-     display: flex;
-     flex-direction: column;
-     left: 70px;
-     align-items: center;
-     border-bottom-left-radius: 10px;
-     border-bottom-right-radius: 10px;
-     background-color: white;
-     opacity: 1;
-    
- }
- .dropdown1 li{
-     display: block;
-     width: 100%;
-     height: 45px;
-     border-bottom: 1px solid rgb(233, 225, 225);;
-     
- }
- .dropdown1 li a{
-     padding: 1em 1em 1em 0.5em;
-     text-decoration: none;
-     color: rgb(107, 104, 104);;
- }
- .dropdown2 {
+.navsrch {
+    position: relative;
+    display: inline-block;  
+}
+.dropdown1 {
     list-style: none;
     position: absolute;
-    width: 170px;
-    z-index: 6;
+    width: 467px;;
+    z-index: 5;
     display: flex;
     flex-direction: column;
-    right: 85px;
-    top: 50px;
+    left: 0px;
     align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: white;
-    border-radius: 10px;
+    opacity: 0;  
+}
+span:focus~ .dropdown1{
     opacity: 1;
 }
-.dropdown2 li{
-    display: block; 
-    width: 100%; 
+.dropdown1 li{
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid rgb(233, 225, 225);;
+    
 }
-.dropdown2 li a{
-    padding: 1em;
+.dropdown1 li a{
+    display: block;
+    width: 100%;
+    padding-bottom: 1em;
     text-decoration: none;
     color: rgb(107, 104, 104);;
 }
-p.pUp {
-    color: white;
-    position: absolute;
-    top: 40px;
-    right: 100px;
-    z-index: 10;
+.navsrch input:focus~ .dropdown1{
     opacity: 1;
-    
+}
+.dropdown1 li:hover{
+    background-color:rgb(71, 122, 233); ;
+}
+.plus {
+    position: relative;
+    display: inline-block; 
+}
+
+.dropdown2 {
+   list-style: none;
+   position: absolute;
+   width: 170px;
+   z-index: 7;
+   display: flex;
+   flex-direction: column;
+   right: 5px;
+   top: 30px;
+   align-items: center;
+   background-color: white;
+   border-radius: 10px;
+   opacity: 0;
+}
+.dropdown2 li{
+   width: 100%; 
+}
+.dropdown2 li a{
+   margin-left: 1em;
+   display: block;
+   text-decoration: none;
+   color: rgb(107, 104, 104);;
+}
+
+p.pUp {
+   color: white;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   z-index: 1;
+   opacity: 0;  
+}
+.plus a:focus~ .dropdown2{
+    opacity: 1;
+}
+.plus a:focus~ .pUp{
+    opacity: 1;
+}
+.dropdown2 li:hover{
+    background-color: rgb(71, 122, 233); 
+ }
+.image{
+    position: relative;
+    display: inline-block;
 }
 .dropdown3 {
-    list-style: none;
-    position: absolute;
-    width: 190px;
-    z-index: 7;
-    display: flex;
-    flex-direction: column;
-    right: 30px;
-    top: 50px;
-    align-items: center;
-    border-radius: 10px;
-    background-color: white;
-    opacity: 1;
+   list-style: none;
+   position: absolute;
+   width: 190px;
+   z-index: 7;
+   display: flex;
+   flex-direction: column;
+   right: 0px;
+   top: 35px;
+   align-items: center;
+   border-radius: 10px;
+   background-color: white;
+   opacity: 0;
 }
 .dropdown3 li{
-    display: block;
-    width: 100%;
-    padding-top: 10px;
-    
+   display: block;
+   width: 100%;
+   
+   
 }
 .dropdown3 li a{
-    padding: 1em;
-    text-decoration: none;
-    color: rgb(107, 104, 104);
-    font-size: .9em;
+   display: block;
+   width: 100%;
+   height: 100%;
+   text-decoration: none;
+   color: rgb(107, 104, 104);
+   font-size: .9em;
+   
 }
 .dropdown3 li button {
-    height: 2.5em;
-    width: 85%;
-    text-align: left;
-    background-color: white;
-    bottom: 1px solid rgb(233, 229, 229);
-    border-radius: 5px;
-    color: rgb(107, 104, 104);
+   height: 2.5em;
+   width: 85%;
+   text-align: left;
+   background-color: white;
+   bottom: 1px solid rgb(233, 229, 229);
+   border-radius: 5px;
+   color: rgb(107, 104, 104);
 }
 .dropdown3 li button .far{
-    font-size: 1.2em;
-    padding-left: .5em;
-    color:rgb(107, 104, 104);
+   font-size: 1.2em;
+   padding-left: .5em;
+   color:rgb(107, 104, 104);
 }
+
 p.pUp2 {
-    color: white;
-    position: absolute;
-    top: 38px;
-    right: 45px;
-    z-index: 10;
-    opacity: 1;
-    
+   color: white;
+   position: absolute;
+   top: 25px;
+   right: 15px;
+   z-index: 1;
+   opacity: 0;   
 }
+.image a:focus~ .dropdown3{
+    opacity: 1;
+}
+.image a:focus~ .pUp2{
+    opacity: 1;
+}
+.dropdown3 li:hover{
+    background-color: rgb(71, 122, 233); 
+ }
+ /*end dropdown*/
+
 nav ul li a:hover{
-    color: rgb(204, 195, 195);
+   color: rgb(204, 195, 195);
 }
 .searchArea a:hover, 
 .ft1 a:hover,
@@ -368,27 +434,23 @@ nav ul li a:hover{
 .Support a:hover,
 .Company a:hover
 {
-   text-decoration: underline;
-   color: rgb(0, 132, 255);
+  text-decoration: underline;
+  color: rgb(0, 132, 255);
 }
 .srh button {
-    background-color: white; 
+   background-color: white; 
 }
 .srh button:hover {
-    background-color: rgb(248, 241, 241); 
+   background-color: rgb(248, 241, 241); 
 }
 .GH  p a button:hover {
-    border: 1px solid blue;
+   border: 1px solid blue;
 }
-.navsrch:focus{
-    background-color: rgb(248, 244, 244); 
-    width: 467px;
-}  
-.navsrch:focus .dropdown1 { opacity: 1;}
-.plus:focus .p.pUp,
-.plus:focus .dropdown2 {opacity: 1;}
-.image:focus .p.pUp2,
-.image:focus .dropdown3 {opacity: 1;}
+.navsrch input:focus{
+   background-color: rgb(248, 244, 244); 
+   width: 467px;
+} 
+
 
 
 
